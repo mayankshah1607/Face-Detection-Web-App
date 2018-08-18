@@ -1,2 +1,2 @@
 # Face-Detection-Web-App
-A web app that performs face detection
+My first 'full stack' web app that can peform face recognition. It uses React.js for front-end and Node.js+PostgreSQL
