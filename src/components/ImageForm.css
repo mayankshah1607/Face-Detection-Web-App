@@ -1,0 +1,12 @@
+.centre {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.light-red {
+    color: #ED1E79;
+}
+
+input[type="text"], input[type="password"], button{ 
+    outline: none;
+}
