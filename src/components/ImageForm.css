@@ -7,6 +7,10 @@
     color: #ED1E79;
 }
 
+button {
+    cursor: pointer;
+}
+
 input[type="text"], input[type="password"], button{ 
     outline: none;
 }

@@ -4,7 +4,7 @@ import 'tachyons';
 const Navigation = () => {
     return(
         <nav style={{display:'flex',justifyContent:'flex-end', }}>
-            <a style={{color: 'white'}}href="#" className="fw6 link dim pa3">Sign Out</a>
+            <a style={{color: 'white'}} className="fw6 link dim pa3">Sign Out</a>
         </nav>
     );
 }
