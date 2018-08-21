@@ -6,8 +6,19 @@ import ImageForm from './components/ImageForm.js';
 import ImageFrame from './components/ImageFrame.js';
 import './components/ImageForm.css'
 import 'tachyons';
+import Particles from 'react-particles-js';
 
-
+const particleOptions = {
+  particles: {
+    number: {
+      value: 30,
+      density: {
+        enabled: true,
+        value_area: 800
+      }
+    }
+  }
+}
 const app = new Clarifai.App({
   apiKey: '852e4f9bebbe479d8847a6c96168a1a3'
  });
@@ -53,6 +64,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+                    <Particles className='particles'
+              params={particleOptions}
+            />
+
         <Navigation/>
         <ImageForm onTextChange={this.onTextChange} onButtonSubmit={this.onButtonSubmit}/>
         { this.state.showResult ? <ImageFrame imgURL={this.state.imgURL} age={this.state.age} gender={this.state.gender} origin={this.state.origin}/> : null }
