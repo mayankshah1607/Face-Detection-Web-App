@@ -20,7 +20,8 @@ class App extends Component {
       imgURL: '',
       age: '',
       gender: '',
-      origin: ''
+      origin: '',
+      showResult: false
     }
   }
 
@@ -35,6 +36,7 @@ class App extends Component {
   onButtonSubmit = () => {
 
     this.setState({imgURL: this.state.input});
+    this.setState({showResult: true});
     app.models.predict(Clarifai.DEMOGRAPHICS_MODEL, this.state.input)
     .then( response => {
       console.log(response.rawData.outputs[0].data.regions[0].data.face)
@@ -53,7 +55,7 @@ class App extends Component {
       <div className="App">
         <Navigation/>
         <ImageForm onTextChange={this.onTextChange} onButtonSubmit={this.onButtonSubmit}/>
-        <ImageFrame imgURL={this.state.imgURL} age={this.state.age} gender={this.state.gender} origin={this.state.origin}/>
+        { this.state.showResult ? <ImageFrame imgURL={this.state.imgURL} age={this.state.age} gender={this.state.gender} origin={this.state.origin}/> : null }
       </div>
     );
   }
