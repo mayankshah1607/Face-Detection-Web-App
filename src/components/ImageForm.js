@@ -6,9 +6,9 @@ const ImageForm = ({onTextChange, onButtonSubmit}) => {
     return(
         <div>
             
-            <p className='fw6 f3 centre mv3' style={{color:'white'}}>{'Demographical predictions using Machine Learning.'}</p><br/>
-            <p className='fw6 f5 centre mv3' style={{color:'white'}}>{'Continue by entering the URL of the person\'s image'}</p><br/>
-                <div className='centre flex ba pa0 b--white bw3 br4 bg-white'>
+            <p className='fw6 f3 centre mh6' style={{color:'white'}}>{'Demographical predictions using Machine Learning.'}</p><br/>
+            <p className='fw6 f5 centre mh6' style={{color:'white'}}>{'Continue by entering the URL of the person\'s image'}</p><br/>
+                <div className='centre flex ba mh6 pa0 b--white bw3 br4 bg-white'>
                     <input className='f5 pa3 ba bw0 br4' type='text' onChange={onTextChange} placeholder='Enter image URL...'/>
                     <button onClick={onButtonSubmit} className='f6 fw6 grow br3 ph4 dib white bg-blue ba bw0'>Predict</button>
                 </div>
