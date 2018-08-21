@@ -46,6 +46,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
 
+    this.setState({age:'',gender:'',origin:''});
     this.setState({imgURL: this.state.input});
     this.setState({showResult: true});
     app.models.predict(Clarifai.DEMOGRAPHICS_MODEL, this.state.input)
