@@ -2,8 +2,10 @@
   "name": "face-detection-web-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mayankshah1607.github.io/demographic-classification-web-app/",
   "dependencies": {
     "clarifai": "^2.8.0",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.4",
@@ -13,6 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build"
   }
 }
