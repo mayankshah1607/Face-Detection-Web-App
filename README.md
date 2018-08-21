@@ -1,2 +1,2 @@
 # Face-Detection-Web-App
-My first 'full stack' web-app that performs face recognition. It used React.js and Node.js+PostgreSQl 
+A web-app built using react.js that used clarifai API to predict the age,gender and culture of a person, given his/her image.
